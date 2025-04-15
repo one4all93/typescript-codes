@@ -49,3 +49,72 @@ let tuple2 : [string, number]
 tuple2 = ["Dong Joon", 1]
 tuple2.push(2)
 console.log(tuple2) // ["Dong Joon", 1, 2]
+
+// any
+let any : any = 'abc'
+any = 1;
+any = [];
+
+// unknown
+let unknown : unknown = 123;
+//let string : string = unknown; // Error: Type 'unknown' is not assignable to type 'string'.
+let string2 : string = unknown as string; // Type assertion
+
+// object
+let obj: object = {};
+let arr: object = [];
+//let null: object = null;
+let date: object = new Date();
+
+const obj1: {id : number , tit : string , description : string} = {
+    id : 1,
+    tit : 'tit1',
+    description : 'description'
+}
+
+// union
+let union: (string | number)
+union = 'hi';
+union = 123;
+//union = []
+
+// Function
+let func1:(arg1:number , arg2:number) => number;
+func1 = function(x,y){
+    return x*y;
+}
+
+let func2 : () => void;
+func2 = function(){
+    console.log('hi')
+}
+
+// Null, Undefined
+// let number1 : number = undefined;
+// let string9 : string = null;
+// let object : {a:10,b:false} = undefined;
+// let array : any[] = null;
+// let undefined1 : undefined = null;
+// let null1 : null = undefined;
+// let void1 : void = null;
+
+let void2 : void = undefined;
+
+// void
+function greeting() : void{
+    console.log('hi');
+}
+
+// never
+function throwError() {
+    throw new Error('error');
+}
+
+function keepProcessing() : never{
+    while(true){
+        console.log('hi');
+    }
+}
+
+const never : number[] = []
+never.push(1);
