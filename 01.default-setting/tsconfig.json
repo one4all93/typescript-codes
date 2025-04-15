@@ -1,0 +1,15 @@
+{"compilerOptions": {
+    "rootDir": "01.default-setting/src",
+    "outDir": "01.default-setting/build/js",
+    "target": "ES2015",
+    "noEmitOnError": false , 
+    "module": "ESNext", // ES6 이후버전
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "strict": true,
+},
+"include": [
+    "01.default-setting/src/**/*.ts"
+],
+}

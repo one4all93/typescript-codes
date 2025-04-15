@@ -81,3 +81,5 @@ type Props = {
 function Profile({ name, age, onClick }: Props) {
   return <div onClick={onClick}>{name} ({age})</div>;
 }
+
+
