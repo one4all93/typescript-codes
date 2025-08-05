@@ -89,6 +89,13 @@ func2 = function(){
     console.log('hi')
 }
 
+// 로그 디버깅 함수로 사용하면 될듯***
+let myLog : (msg: string) => void;
+// 줄라인도 같이 넣어주면 좋을듯
+const log = (msg: string , object: any) => {
+  console.log(`[LOG]: ${msg}` , object);
+};
+
 // Null, Undefined
 // let number1 : number = undefined;
 // let string9 : string = null;
